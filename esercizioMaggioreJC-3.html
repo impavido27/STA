@@ -31,19 +31,24 @@ let num3=parseFloat(document.getElementById("n3").value);
 
 
 let GoreA=0;
-GoreA=quadrato(num3);
+GoreA=quadrato(num1);
 
 let GoreB=0;
-GoreB=quadrato(num1);
+GoreB=quadratoB(num2);
 
 let GoreC=0;
-GoreC=quadrato(num3);
+GoreC=quadratoC(num3);
  
-document.getElementById("risultato").innerHTML="i quadrati sono"+ GoreA+ " " +GoreB+" "+ GoreC;
+document.getElementById("risultato").innerHTML="i quadrati sono"+ " "+ GoreA+ " " +GoreB+" "+ GoreC;
 
 }
 function quadrato (a) {
                 return a*a;
 }
-
+function quadratoB (b) {
+                return b*b;
+}
+function quadratoC (c) {
+                return c*c;
+}
 </script>
