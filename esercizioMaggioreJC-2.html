@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p> Serie di esercizi per comprendere Javascript + html</p>
+   
+    <p>1-Dati 2 numeri in input indicare il maggiore</p>
+        <div>
+            <input type="number" name="n1" id="n1">
+            <input type="number" name="n2" id="n2">
+            <input type="number" name="n3" id="n3">
+<Button onclick="CalcolaMaggiore()" > Confronta i due numeri</Button>
+        </div>
+
+        <p id="risultato"></p>
+<script>
+function maggiore(a,b,c){
+    if (a>b) 
+      { if (a>c)
+       { return a; }
+       else
+       { return c; }
+        }
+    else
+      {  if (b>c)
+       { return b; }
+       else
+       { return c; } 
+        }}
+function CalcolaMaggiore(){
+
+/****parte di input che manca*/
+let num1=parseFloat(document.getElementById("n1").value);
+let num2=parseFloat(document.getElementById("n2").value);
+let num3=parseFloat(document.getElementById("n3").value);
+
+
+let max=0;
+max=maggiore(num1,num2,num3);
+
+document.getElementById("risultato").innerHTML="il numero maggiore è"+ max;
+
+}
+
+
+</script>
