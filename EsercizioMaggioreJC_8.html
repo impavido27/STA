@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 8</title>
+
+ <style>
+
+    #lunghezza{
+             color:red;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+    #maiuscolo{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+       #minuscolo{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+      #invertita{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+      #spazi{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+      #primocarattere{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+     #secondocarattere{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+    #ultimocarattere{
+             color:blue;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+    #omega{
+             color:green;
+                    font-size: 20px;
+                    font-weight: bold;
+    }
+ 
+ </style>
+
+
+
+
+</head>
+<body>
+    <p>Esercizi di esempio di conversioni con le stringhe</p>
+    <input type="text" name="" id="in1"> <br>
+    <button onclick="conversione()" > Converti</button>
+    <p id="out"> </p>
+     <h1>Risultati:</h1>
+        <p id="maiuscolo"></p>
+        <p id="minuscolo"></p>
+        <p id="lunghezza"></p>
+        <p id="invertita"></p>
+        <p id="spazi"></p>
+        <p id="primocarattere"></p>
+        <p id="secondocarattere"></p>
+        <p id="ultimocarattere"></p>
+        <p id="omega"></p>
+        </p>
+
+
+    <script>
+        function conversione(){
+            let testo=document.getElementById("in1").value;
+            document.getElementById("out").innerText="Trasformo seguente stringa " + testo;
+            // trasformo la stringa dentro la variabile testo in tutto maiuscolo
+            document.getElementById("maiuscolo").innerText="La parola in maiuscolo è: "+ testo.toUpperCase();
+            // trasformo tutto in minuscolo
+            document.getElementById("minuscolo").innerText="La parola in minuscolo è: "+ testo.toLowerCase();
+            // conto i caratteri della stringa
+            document.getElementById("lunghezza").innerText="La lunghezza è: "+ testo.length;
+            // inverto la parola
+            document.getElementById("invertita").innerText="La parola invertita è: "+ testo.split("").reverse().join();
+            // al posto degli spazi inserisco la stringa -
+            document.getElementById("spazi").innerText="Gli spazi sono: "+ testo.replaceAll(" ","-");
+            // stampo primo carattere della stringa
+            document.getElementById("primocarattere").innerText="La prima lettera è: "+ testo[0];
+            // stampo il secondo carattere della stringa
+            document.getElementById("secondocarattere").innerText="La seconda lattera è: "+ testo[1];
+            // stampo l'ultimo carattere della stringa
+            document.getElementById("ultimocarattere").innerText="L'ultima lettera è: "+ testo[testo.length-1];
+            // stampo il primo carattere maiuscolo
+            document.getElementById("omega").innerText="La prima lettera maiuscola è: "+ testo[0].toUpperCase();
+       
+        }
+
+
+
+
+
+
+   </script>
+
+</body>
+</html>
