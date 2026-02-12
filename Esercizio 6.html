@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 8</title>
+</head>
+<body>
+    <p>Esercizi di esempio di conversioni con le stringhe</p>
+    <input type="text" name="" id="in1"> <br>
+    <button onclick="conversione()" > Converti</button>
+    <p id="out"> </p>
+     <h1>Risultati:</h1>
+        <p id="maiuscolo"></p>
+        <p id="minuscolo"></p>
+        <p id="lunghezza"></p>
+        <p id="invertita"></p>
+        <p id="spazi"></p>
+        <p id="primocarattere"></p>
+        <p id="secondocarattere"></p>
+        <p id="ultimocarattere"></p>
+    </p>
+
+
+    <script>
+        function conversione(){
+            let testo=document.getElementById("in1").value;
+            document.getElementById("out").innerText="Trasformo seguente stringa " + testo;
+            // trasformo la stringa dentro la variabile testo in tutto maiuscolo
+            document.getElementById("maiuscolo").innerText=testo.toUpperCase();
+            // trasformo tutto in minuscolo
+            document.getElementById("minuscolo").innerText=testo.toLowerCase();
+            // conto i caratteri della stringa
+            document.getElementById("lunghezza").innerText=testo.length;
+            // inverto la parola
+            document.getElementById("invertita").innerText=testo.split("").reverse().join();
+            // al posto degli spazi inserisco la stringa -
+            document.getElementById("spazi").innerText=testo.replaceAll(" ","-");
+            // stampo primo carattere della stringa
+            document.getElementById("primocarattere").innerText=testo[0];
+            // stampo il secondo carattere della stringa
+            document.getElementById("secondocarattere").innerText=testo[1];
+            // stampo l'ultimo carattere della stringa
+            document.getElementById("ultimocarattere").innerText=testo[testo.length-1];
+        }
+
+
+
+
+
+
+   </script>
+
+</body>
+</html>
