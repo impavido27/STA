@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatore kWh</title>
+    <style>
+    
+        #risultato { font-size:35px; color: purple; }
+    </style>
+</head>
+<body>
+
+    <h2>Calcolatore kWh</h2>
+    <input type="number" id="watt" placeholder="Potenza in Watt (es. 2000)">
+    <input type="number" id="ore" placeholder="Ore d'uso giornaliere">
+    <button onclick="calcolaKwh()">Calcola</button>
+    
+    <p style="text-align:center;" style="font-family:courier;" id="risultato">Consumo: 0 kWh</p>
+
+    <script>
+        function calcolaKwh() {
+            var watt = document.getElementById('watt').value;
+            var ore = document.getElementById('ore').value;
+            var risultatoP = document.getElementById('risultato');
+
+            if (watt === "" || ore ==="" || watt <= 0 || ore <= 0) {
+                risultatoP.innerHTML = "Per favore, inserisci valori validi.";
+                return;
+            }
+
+            var kwh = (parseFloat(watt) * parseFloat(ore)) / 1000;
+
+            risultatoP.innerHTML = "Consumo giornaliero: " + kwh.toFixed(2) + " kWh";
+        }
+    </script>
+
+</body>
+</html>
