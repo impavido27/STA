@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Distributore automatico</h2>
+
+    <input type="number" id="età" placeholder="Inserisci età">
+    <input type="number" id="denaro" placeholder="Inserisci quantità di denaro utilizzato">
+    <button onclick="CalcolaBevandeDisponibili()">Bevande disponibli:</button>
+    <p id="risultato">===</p>
+    
+
+<script>
+        function CalcolaBevandeDisponibili(){
+        let età=document.getElementById("età").value;
+        let denaro=document.getElementById("denaro").value;
+        let risultato=document.getElementById("risultato");
+        
+
+        if( (età<18) || (denaro>=2))
+         {
+            risultato.innerHTML="puoi compare solamente il succo (2 euro)";
+         }
+        else if((età<=0) || (denaro<=0) || (età === "") || (denaro === ""))
+         {
+            risultato.innerHTML="dati inseriti incorretti o insufficienti, necessaria correzione";
+         }
+
+
+        if ((età>=18) || (denaro>=5))
+         {
+            risultato.innerHTML="puoi compare un succo(2 euro) o una birra (5 euro)";
+         }
+      }
+
+ </script>
+
+</body>
+</html>
