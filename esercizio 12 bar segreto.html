@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Bar segreto</h2>
+
+    <input type="number" id="età" placeholder="Inserisci età">
+    <input type="number" id="denaro" placeholder="Inserisci quantità di denaro utilizzato">
+    <input type="string" id="password" placeholder="inserire password">
+    <button onclick="ControllaIdentità()">Puoi entrare?</button>
+    <p id="risultato">===</p>
+    
+
+<script>
+        function ControllaIdentità(){
+        let età=document.getElementById("età").value;
+        let denaro=document.getElementById("denaro").value;
+        let password=document.getElementById("password").value;
+        let risultato=document.getElementById("risultato");
+    
+
+        if   (denaro>=10)
+         {
+            risultato.innerHTML="Buttafuori: benvenuto e buona giornata ";
+         }
+        else if (denaro<10)
+         {
+            risultato.innerHTML="Buttafuori: non hai abbastanza denaro";
+         }
+
+         if(età>=18)
+         {
+            risultato.innerHTML="Buttafuori: benvenuto e buona giornata";
+         }
+         else if(età<18)
+         {
+            risultato.innerHTML="Buttafuori: sei troppo giovane, non puoi entrare"
+         }
+         if(password === "banana")
+         {
+            risultato.innerHTML="Buttafuori: benvenuto e buona giornata";
+         }
+         else 
+         {
+            risultato.innerHTML="Buttafuori: password errata"
+         }
+
+        }
+ </script>
