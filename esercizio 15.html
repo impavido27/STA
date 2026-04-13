@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Data la quantità di soldi, dividere per 10, 20 e 50</h2>
+
+
+    <div class="input">
+     <input type="number" id="num1" placeholder="inserire quantità di soldi da dividere">
+    </div>
+
+     <button onclick="Divisione()">Calcolo risultato</button>
+
+      <div id="risultatoDi10"></div>
+      <div id="risultatoDi20"></div>
+      <div id="risultatoDi50"></div>
+    
+      <script>
+        function Divisione() {
+
+            let n1 = parseInt(document.getElementById('num1').value);
+
+            let divisione1 = n1 / 10;
+            let divisione2 = n1 / 20;
+            let divisione3 = n1 / 50;
+
+
+       document.getElementById("risultatoDi10").innerHTML = "per il pagamento vanno usare " + divisione1 + " banconote da 10";
+       document.getElementById("risultatoDi20").innerHTML = "per il pagamento vanno usare " + divisione2 + " banconote da 20";
+       document.getElementById("risultatoDi50").innerHTML = "per il pagamento vanno usare " + divisione3 + " banconote da 50";
+                 }
+        
+        </script>
+
+</body>
+</html>
